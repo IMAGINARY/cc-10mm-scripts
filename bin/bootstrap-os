@@ -82,6 +82,7 @@ bootstrap() {
 
     # Install the video exhibits
     install-gulf-stream-video
+    install-paleoclimatology-video
     install-richardsons-stadium-video
     install-zoom-the-scientists-video
 
