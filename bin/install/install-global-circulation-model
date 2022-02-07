@@ -1,0 +1,9 @@
+#!/bin/bash
+
+COMMITISH="4a7a0f521c949f49fdb853182466bad9f7a5f426"
+REPO_URL="https://github.com/IMAGINARY/earth"
+INSTALL_DIR="/opt/global-circulation-model"
+
+"${BASH_SOURCE%/*}/../internal/install-source-from-git" "$COMMITISH" "$REPO_URL" "$INSTALL_DIR"
+
+exit $?

@@ -72,6 +72,7 @@ bootstrap() {
     install-kiosk-browser
 
     # Install the exhibits
+    install-global-circulation-model
     install-navier-stroke
 
     # Run the kiosk-config script

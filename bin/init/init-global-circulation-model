@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Rotate output
+OUTPUT=$(xrandr | grep "connected [0-9]" | sed "s/ .*$//g")
+echo "Rotating output $OUTPUT"
+xrandr --output "$OUTPUT" --auto --rotate left
+
+# Determine IDs of absolute pointer devices
+ABS_POINTER_XINPUT_IDS=$(xinput list --id-only | xargs -I {} bash -c 'xinput list --long {} | grep "Abs MT Position" 2>&1 >/dev/null && echo {}')
+
+# Map the absolute pointer devices to the rotated output
+echo "Mapping the following absolute input devices to output ${OUTPUT}:"
+while IFS= read -r ABS_POINTER_XINPUT_ID; do
+  xinput list --short "$ABS_POINTER_XINPUT_ID"
+  xinput map-to-output "$ABS_POINTER_XINPUT_ID" "$OUTPUT"
+done <<< "$ABS_POINTER_XINPUT_IDS"
+
+sleep 1
