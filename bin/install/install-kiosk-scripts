@@ -36,7 +36,7 @@ install() {
     else
         # no local changes, check for remote changes
         git remote remove origin &> /dev/null || true
-        git remote add origin https://github.com/IMAGINARY/iamai-scripts.git
+        git remote add origin https://github.com/IMAGINARY/cc-10mm-scripts.git
         git fetch --tags origin
 
         EMPTY_TREE_SHA=$(git hash-object -t tree --stdin < /dev/null)

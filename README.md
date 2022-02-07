@@ -1,6 +1,6 @@
-# I-AM-A.I. scripts
+# Scripts for 10 minute museum on climate change
 
-These scripts are used to install certain interactive stations in the I AM A.I. exhibition.
+These scripts are used to install certain interactive stations in the 10 minute museum on climate change.
 
 # Installation
 
@@ -23,7 +23,7 @@ The script `bin/bootstrap-os` will install required packages, the scripts in thi
 well as most of the exhibits:
 
 ```
-wget https://raw.githubusercontent.com/IMAGINARY/iamai-scripts/main/bin/bootstrap-os
+wget https://raw.githubusercontent.com/IMAGINARY/cc-10mm-scripts/main/bin/bootstrap-os
 chmod +x bootstrap-os
 sudo ./bootstrap-os
 ```
