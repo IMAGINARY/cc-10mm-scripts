@@ -1,0 +1,9 @@
+#!/bin/bash
+
+COMMITISH="2e49c31f4cfab4fa3901137bbc01fef22c985cd8"
+REPO_URL="https://github.com/IMAGINARY/warming-navigator"
+INSTALL_DIR="/opt/warming-navigator"
+
+"${BASH_SOURCE%/*}/../internal/install-source-from-git" "$COMMITISH" "$REPO_URL" "$INSTALL_DIR"
+
+exit $?

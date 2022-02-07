@@ -75,6 +75,7 @@ bootstrap() {
     install-box-models
     install-global-circulation-model
     install-navier-stroke
+    install-warming-navigator
 
     # Run the kiosk-config script
     ASK_TO_REBOOT=1 /opt/kiosk-scripts/bin/kiosk-config
