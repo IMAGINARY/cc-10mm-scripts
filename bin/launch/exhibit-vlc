@@ -1,0 +1,27 @@
+#!/bin/bash
+# This wrapper script is supposed to be visible in ps -a resp. ps -u `id -u` to 
+# make it easy to kill it (by a script or manually)
+
+PIDS=""
+function finish {
+    EXIT_CODE=$?
+    kill $PIDS >/dev/null 2>&1
+    exit $EXIT_CODE
+}
+trap finish SIGINT SIGTERM EXIT
+
+VLC="vlc"
+VLC_OPTS=(
+  "--quiet"
+  "--no-osd"
+  "--fullscreen"
+  "--loop"
+)
+
+# Launch the exhibit in the background
+"$VLC" "${VLC_OPTS[@]}" "${VLC_PATH}" "$@" &
+PID_UI=$!
+PIDS="$PIDS $PID_UI"
+
+# Wait for the exhibit to finish or until the signal trap is triggered
+wait $PID_UI

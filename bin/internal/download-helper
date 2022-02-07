@@ -1,0 +1,23 @@
+#!/bin/bash
+
+function urldecode() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
+
+function filename() {
+  urldecode "$(basename $1)"
+}
+
+function download_single() {
+  PREFIX="$1"
+  URL="$2"
+  FILENAME=$(filename $2)
+  wget -O "$PREFIX/$FILENAME" "$URL"
+}
+
+function download_all() {
+  PREFIX="$1"
+  shift 1
+  for url in "$@"
+  do
+    download_single "$PREFIX" "$url"
+  done
+}

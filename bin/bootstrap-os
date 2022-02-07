@@ -71,11 +71,14 @@ bootstrap() {
     # Install dependencies common to many exhibits
     install-kiosk-browser
 
-    # Install the exhibits
+    # Install the interactive exhibits
     install-box-models
     install-global-circulation-model
     install-navier-stroke
     install-warming-navigator
+
+    # Install the audio exhibits
+    install-sounds-of-climate-change
 
     # Run the kiosk-config script
     ASK_TO_REBOOT=1 /opt/kiosk-scripts/bin/kiosk-config
