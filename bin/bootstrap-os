@@ -82,6 +82,7 @@ bootstrap() {
 
     # Install the video exhibits
     install-gulf-stream-video
+    install-zoom-the-scientists-video
 
     # Run the kiosk-config script
     ASK_TO_REBOOT=1 /opt/kiosk-scripts/bin/kiosk-config
