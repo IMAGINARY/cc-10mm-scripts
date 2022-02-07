@@ -1,0 +1,9 @@
+#!/bin/bash
+
+COMMITISH="afc81dd0b13d90644ba1602cf34dc3198d55ca66"
+REPO_URL="https://github.com/IMAGINARY/climate-crisis-box-models"
+INSTALL_DIR="/opt/box-models"
+
+"${BASH_SOURCE%/*}/../internal/install-source-from-git" "$COMMITISH" "$REPO_URL" "$INSTALL_DIR"
+
+exit $?
