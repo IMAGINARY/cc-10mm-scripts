@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Include download helper
+. "$(dirname -- "$0")/../internal/download-helper"
+
+install-vlc
+
+INSTALL_DIR="/opt/gulf-stream-video"
+PLAYLIST_FILE="${INSTALL_DIR}/playlist.m3u"
+
+mkdir -p "${INSTALL_DIR}"
+
+URLS=(
+  "https://imaginarymedia.s3.amazonaws.com/10mm_climate_crisis/10mm-climate-crisis-gulf-stream-video/gulf_comp_1024x600.mp4"
+)
+
+download_all "$INSTALL_DIR" "${URLS[@]}"
+
+# Create the playlist file
+for url in "${URLS[@]}"; do
+  filename "$url"
+done >"${PLAYLIST_FILE}"
+
+exit $?
+

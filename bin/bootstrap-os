@@ -80,6 +80,9 @@ bootstrap() {
     # Install the audio exhibits
     install-sounds-of-climate-change
 
+    # Install the video exhibits
+    install-gulf-stream-video
+
     # Run the kiosk-config script
     ASK_TO_REBOOT=1 /opt/kiosk-scripts/bin/kiosk-config
 }
