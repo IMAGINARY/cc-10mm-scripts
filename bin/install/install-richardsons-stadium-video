@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Include download helper
+. "$(dirname -- "$0")/../internal/download-helper"
+
+install-vlc
+
+INSTALL_DIR="/opt/richardsons-stadium-video"
+PLAYLIST_FILE="${INSTALL_DIR}/playlist.m3u"
+
+mkdir -p "${INSTALL_DIR}"
+rm -rf "${INSTALL_DIR:?}/"*
+
+URLS=(
+  "https://imaginarymedia.s3.eu-central-1.amazonaws.com/10mm_climate_crisis/richardsons-factory/demo-stereo-video.mp4"
+  "https://imaginarymedia.s3.eu-central-1.amazonaws.com/10mm_climate_crisis/richardsons-factory/demo-vr-video.mp4"
+  "https://imaginarymedia.s3.eu-central-1.amazonaws.com/10mm_climate_crisis/richardsons-factory/demo-vr-video-2.mp4"
+)
+
+download_all "$INSTALL_DIR" "${URLS[@]}"
+
+# Create the playlist file
+for url in "${URLS[@]}"; do
+  filename "$url"
+done >"${PLAYLIST_FILE}"
+
+exit $?
