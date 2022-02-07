@@ -72,6 +72,7 @@ bootstrap() {
     install-kiosk-browser
 
     # Install the exhibits
+    install-navier-stroke
 
     # Run the kiosk-config script
     ASK_TO_REBOOT=1 /opt/kiosk-scripts/bin/kiosk-config
