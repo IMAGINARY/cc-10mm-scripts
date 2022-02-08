@@ -17,6 +17,10 @@ bootstrap() {
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8CF63AD3F06FC659
     add-apt-repository "deb http://ppa.launchpad.net/jonathonf/barrier/ubuntu focal main"
 
+    # Add PPA for picom which is a fork of the unmaintained compton
+    # compositor
+    add-apt-repository -y ppa:yurivkhan/picom
+
     # Update the list of available packages
     apt update
 
@@ -30,7 +34,6 @@ bootstrap() {
     apt install -yq --no-install-recommends \
         aconnectgui \
         barrier \
-        compton \
         curl \
         feh \
         git \
@@ -44,6 +47,7 @@ bootstrap() {
         openssh-server \
         overlayroot \
         pavucontrol \
+        picom \
         qjackctl \
         qsynth \
         ranger \
