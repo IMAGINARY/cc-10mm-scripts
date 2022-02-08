@@ -16,6 +16,12 @@ VLC_OPTS=(
   "--no-osd"
   "--fullscreen"
   "--loop"
+  "--qt-notification=0"
+  "--no-qt-fs-controller"
+  "--no-qt-recentplay"
+  "--qt-continue=0"
+  "--no-qt-error-dialogs"
+  "--no-qt-privacy-ask"
 )
 
 # Launch the exhibit in the background
