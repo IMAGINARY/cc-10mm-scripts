@@ -55,9 +55,9 @@ rm /files/etc/default/grub/GRUB_CMDLINE_LINUX_DEFAULT/value[. = "splash"]
 #set /files/etc/modprobe.d/i915.conf/options[. = "i915"]/enable_guc "3"
 
 # enable tear-free mode for Intel GPUs
-#set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Identifier "Intel Graphics"
-#set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Driver "intel"
-#set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Option[. = "TearFree"] "TearFree"
-#set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Option[. = "TearFree"]/value "true"
-#set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Option[. = "TripleBuffer"] "TripleBuffer"
-#set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Option[. = "TripleBuffer"]/value "true"
+set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Identifier "Intel Graphics"
+set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Driver "intel"
+set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Option[. = "TearFree"] "TearFree"
+set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Option[. = "TearFree"]/value "true"
+set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Option[. = "TripleBuffer"] "TripleBuffer"
+set /files/usr/share/X11/xorg.conf.d/20-intel.conf/Device[Identifier = "Intel Graphics"]/Option[. = "TripleBuffer"]/value "true"
