@@ -9,6 +9,7 @@ INSTALL_DIR="/opt/gulf-stream-video"
 PLAYLIST_FILE="${INSTALL_DIR}/playlist.m3u"
 
 mkdir -p "${INSTALL_DIR}"
+rm -rf "${INSTALL_DIR:?}/"*
 
 URLS=(
   "https://imaginarymedia.s3.amazonaws.com/10mm_climate_crisis/10mm-climate-crisis-gulf-stream-video/gulf_comp_1024x600.mp4"

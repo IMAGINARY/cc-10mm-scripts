@@ -9,6 +9,7 @@ INSTALL_DIR="/opt/zoom-the-scientists-video"
 PLAYLIST_FILE="${INSTALL_DIR}/playlist.m3u"
 
 mkdir -p "${INSTALL_DIR}"
+rm -rf "${INSTALL_DIR:?}/"*
 
 URLS=(
   "https://imaginarymedia.s3.eu-central-1.amazonaws.com/10mm_climate_crisis/ZoomTheScientists/edited_videos/Zoom-Scientists-Test_1024x600.mp4"

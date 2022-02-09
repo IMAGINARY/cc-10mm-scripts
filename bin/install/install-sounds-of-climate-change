@@ -9,6 +9,7 @@ INSTALL_DIR="/opt/sounds-of-climate-change"
 PLAYLIST_FILE="${INSTALL_DIR}/playlist.m3u"
 
 mkdir -p "${INSTALL_DIR}"
+rm -rf "${INSTALL_DIR:?}/"*
 
 URLS=(
   "https://imaginaryexhibits.s3.eu-central-1.amazonaws.com/sounds-of-climate-change/trimmed_normalized/Sonification+Of+Arctic+Sea+Ice-381072587.mp3"

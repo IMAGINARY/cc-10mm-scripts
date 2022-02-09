@@ -9,6 +9,7 @@ INSTALL_DIR="/opt/paleoclimatology-video"
 PLAYLIST_FILE="${INSTALL_DIR}/playlist.m3u"
 
 mkdir -p "${INSTALL_DIR}"
+rm -rf "${INSTALL_DIR:?}/"*
 
 URLS=(
   "http://ftp.vim.org/ftp/ftp/pub/graphics/blender/demo/movies/BBB/bbb_sunflower_1080p_30fps_normal.mp4"
