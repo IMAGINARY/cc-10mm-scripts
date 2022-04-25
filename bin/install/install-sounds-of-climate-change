@@ -12,9 +12,7 @@ mkdir -p "${INSTALL_DIR}"
 rm -rf "${INSTALL_DIR:?}/"*
 
 URLS=(
-  "https://imaginaryexhibits.s3.eu-central-1.amazonaws.com/sounds-of-climate-change/trimmed_normalized/Sonification+Of+Arctic+Sea+Ice-381072587.mp3"
-  "https://imaginaryexhibits.s3.eu-central-1.amazonaws.com/sounds-of-climate-change/trimmed_normalized/The+Deafening+Rise+of+Carbon+Pollution-Y45Mm-EHcxs.mp3"
-  "https://imaginaryexhibits.s3.eu-central-1.amazonaws.com/sounds-of-climate-change/trimmed_normalized/the+sound+of+earth's+fever-303328349.mp3"
+  "https://imaginaryexhibits.s3.amazonaws.com/sounds-of-climate-change/10mm-climate-crisis-sonification-mix.mp3"
 )
 
 download_all "$INSTALL_DIR" "${URLS[@]}"
