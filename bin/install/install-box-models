@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMMITISH="d817a72422608d335e89091a1848251f8bccfafb"
+COMMITISH="5862cbdfebdff9d1aeefaccc601624a225fe2e4c"
 REPO_URL="https://github.com/IMAGINARY/climate-crisis-box-models"
 INSTALL_DIR="/opt/box-models"
 
