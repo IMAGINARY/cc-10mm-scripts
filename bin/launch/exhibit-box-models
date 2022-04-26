@@ -16,11 +16,13 @@ kiosk-browser $KIOSK_OPTS \
     --fullscreen \
     --disable-drag \
     --disable-selection \
+    --hide-scrollbars \
     --overflow=hidden \
-    --reload-idle "$(( 3 * 60 ))" \
+    --fit=1024x600 \
+    --reload-idle "$(( 60 * 60 ))" \
     --reload-unresponsive 60 \
     --serve /opt/box-models/dist \
-    "index.html" &
+    "index.html?osc=false&wheelDivisor=53" &
 PID_UI=$!
 PIDS="$PIDS $PID_UI"
 
