@@ -22,7 +22,7 @@ kiosk-browser $KIOSK_OPTS \
     --reload-idle "$(( 60 * 60 ))" \
     --reload-unresponsive 60 \
     --serve /opt/box-models/dist \
-    "index.html?osc=false&wheelDivisor=53" &
+    "index.html?osc=false&wheelDivisor=256&wheelInvert=true" &
 PID_UI=$!
 PIDS="$PIDS $PID_UI"
 
