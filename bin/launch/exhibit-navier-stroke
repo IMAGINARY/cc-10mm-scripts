@@ -20,7 +20,7 @@ kiosk-browser $KIOSK_OPTS \
     --reload-idle "$(( 60 * 60 ))" \
     --reload-unresponsive 60 \
     --serve /opt/navier-stroke \
-    "index.html?idleTimeout=20&idleDuration=180&touchIconDelay=60" &
+    "index.html?idleTimeout=15&idleDuration=180&touchIconDelay=10" &
 PID_UI=$!
 PIDS="$PIDS $PID_UI"
 
