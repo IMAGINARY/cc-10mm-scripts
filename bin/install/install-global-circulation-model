@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMMITISH="4a7a0f521c949f49fdb853182466bad9f7a5f426"
+COMMITISH="4996c96be1f642451797d3c2a49c530299ad07ca"
 REPO_URL="https://github.com/IMAGINARY/earth"
 INSTALL_DIR="/opt/global-circulation-model"
 
