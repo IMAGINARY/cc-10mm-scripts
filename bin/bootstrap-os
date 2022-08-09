@@ -12,15 +12,6 @@ bootstrap() {
     # don't prompt during installations
     export DEBIAN_FRONTEND=noninteractive
 
-    # Add PPA for software not in the default Ubuntu repositories
-    #add-apt-repository -y ppa:jonathonf/barrier
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8CF63AD3F06FC659
-    add-apt-repository "deb http://ppa.launchpad.net/jonathonf/barrier/ubuntu focal main"
-
-    # Add PPA for picom which is a fork of the unmaintained compton
-    # compositor
-    add-apt-repository -y ppa:yurivkhan/picom
-
     # Update the list of available packages
     apt update
 
