@@ -12,7 +12,7 @@ mkdir -p "${INSTALL_DIR}"
 rm -rf "${INSTALL_DIR:?}/"*
 
 URLS=(
-  "https://imaginarymedia.s3.eu-central-1.amazonaws.com/10mm_climate_crisis/ZoomTheScientists/edited_videos/Zoom-Scientists-Test_1024x600.mp4"
+  "https://imaginarymedia.s3.eu-central-1.amazonaws.com/10mm_climate_crisis/ZoomTheScientists/edited_videos/Imaginary-ZOOM-export2-subt-de.mp4"
 )
 
 download_all "$INSTALL_DIR" "${URLS[@]}"
